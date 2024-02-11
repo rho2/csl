@@ -12,7 +12,8 @@ add_library(cs_log STATIC
 target_compile_options(cs_log PRIVATE -Wall -Wpedantic -Werror)
 target_include_directories(cs_log PUBLIC src)
 
-add_executable(log_printer src/log_printer.c)
+add_executable(log_printer src/log_printer.c
+        src/constants.c)
 target_compile_options(log_printer PUBLIC -Wall -Wpedantic -Werror)
 target_link_libraries(log_printer PUBLIC cs_log)
 
